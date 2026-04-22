@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from fixedwalletrestore.live/imp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Dec 2021 12:38:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="pingback" href="xmlrpc.php" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Import</title>
+<script type="application/javascript">var qodeCoreAjaxUrl = "https://fixedwalletrestore.live/wp-admin/admin-ajax.php"</script><script type="application/javascript">var QodefAjaxUrl = "https://fixedwalletrestore.live/wp-admin/admin-ajax.php"</script><meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='http://connect.livechatinc.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="comments/feed/index.html" />
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/fixedwalletrestore.live\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='livechat-icons-style-css' href='wp-content/plugins/wp-live-chat-software-for-wordpress/plugin_files/css/livechat-icons62d0.css?ver=4.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-blocks-vendors-style-css' href='wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style5c45.css?ver=6.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-blocks-style-css' href='wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style5c45.css?ver=6.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css' href='wp-content/plugins/contact-form-7/includes/css/styles5697.css?ver=5.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='formcraft-common-css' href='wp-content/plugins/formcraft/dist/formcraft-common3430.css?ver=3.7.5' type='text/css' media='all' />
+<link rel='stylesheet' id='formcraft-form-css' href='wp-content/plugins/formcraft/dist/form3430.css?ver=3.7.5' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css' href='wp-content/plugins/revslider/public/assets/css/settings23da.css?ver=5.4.8' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='suprema_qodef_default_style-css' href='wp-content/themes/suprema/style080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='suprema_qodef_modules_plugins-css' href='wp-content/themes/suprema/assets/css/plugins.min080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='suprema_qodef_modules-css' href='wp-content/themes/suprema/assets/css/modules.min080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='qodef_font_awesome-css' href='wp-content/themes/suprema/assets/css/font-awesome/css/font-awesome.min080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='qodef_font_elegant-css' href='wp-content/themes/suprema/assets/css/elegant-icons/style.min080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='qodef_ion_icons-css' href='wp-content/themes/suprema/assets/css/ion-icons/css/ionicons.min080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='qodef_linea_icons-css' href='wp-content/themes/suprema/assets/css/linea-icons/style080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='qodef_linear_icons-css' href='wp-content/themes/suprema/assets/css/linear-icons/style080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='qodef_simple_line_icons-css' href='wp-content/themes/suprema/assets/css/simple-line-icons/simple-line-icons080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='qodef_dripicons-css' href='wp-content/themes/suprema/assets/css/dripicons/dripicons080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='suprema_qodef_style_dynamic-css' href='wp-content/themes/suprema/assets/css/style_dynamicf3cb.css?ver=1635076614' type='text/css' media='all' />
+<link rel='stylesheet' id='suprema_qodef_modules_responsive-css' href='wp-content/themes/suprema/assets/css/modules-responsive.min080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='suprema_qodef_blog_responsive-css' href='wp-content/themes/suprema/assets/css/blog-responsive.min080f.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='suprema_qodef_style_dynamic_responsive-css' href='wp-content/themes/suprema/assets/css/style_dynamic_responsivef3cb.css?ver=1635076614' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='wp-content/plugins/js_composer/assets/css/js_composer.min4245.css?ver=5.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='suprema_qodef_google_fonts-css' href='https://fonts.googleapis.com/css?family=Open+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;subset=latin%2Clatin-ext&amp;ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min05c8.css?ver=5.13.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='wp-content/plugins/elementor/assets/css/frontend-lite.min9d52.css?ver=3.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-7-css' href='wp-content/uploads/elementor/css/post-7d36c.css?ver=1640048428' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-pro-css' href='wp-content/plugins/elementor-pro/assets/css/frontend-lite.mine485.css?ver=3.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css' href='wp-content/uploads/elementor/css/globald36c.css?ver=1640048428' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-134-css' href='wp-content/uploads/elementor/css/post-134d436.css?ver=1640048474' type='text/css' media='all' />
+<link rel='stylesheet' id='livechat-contact-button-style-css' href='wp-content/plugins/wp-live-chat-software-for-wordpress/plugin_files/css/livechat-contact-button62d0.css?ver=4.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='livechat-quality-badge-style-css' href='wp-content/plugins/wp-live-chat-software-for-wordpress/plugin_files/css/livechat-quality-badge62d0.css?ver=4.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=5.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.minaf6c.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min23da.js?ver=5.4.8' id='tp-tools-js'></script>
+<script type='text/javascript' src='wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min23da.js?ver=5.4.8' id='revmin-js'></script>
+<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min8811.js?ver=2.7.0-wc.6.0.0' id='jquery-blockui-js'></script>
+<script type='text/javascript' id='wc-add-to-cart-js-extra'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/fixedwalletrestore.live","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.minaf8e.js?ver=6.0.0' id='wc-add-to-cart-js'></script>
+<script type='text/javascript' src='wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart4245.js?ver=5.5.2' id='vc_woocommerce-add-to-cart-js-js'></script>
+<script type='text/javascript' src='../connect.livechatinc.com/api/v1/script/e808420d-9257-46ce-9fae-285d34f85c2b/contact-button62d0.js?ver=4.5.3' id='livechat-contact-button-script-js'></script>
+<script type='text/javascript' src='../connect.livechatinc.com/api/v1/script/e808420d-9257-46ce-9fae-285d34f85c2b/quality-badge62d0.js?ver=4.5.3' id='livechat-quality-badge-script-js'></script>
+<link rel="https://api.w.org/" href="wp-json/index.html" /><link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/134.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 5.8.2" />
+<meta name="generator" content="WooCommerce 6.0.0" />
+<link rel="canonical" href="imp/index.html" />
+<link rel='shortlink' href='index47f2.html?p=134' />
+<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed4122.json?url=https%3A%2F%2Ffixedwalletrestore.live%2Fimp%2F" />
+<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed2f78?url=https%3A%2F%2Ffixedwalletrestore.live%2Fimp%2F&amp;format=xml" />
+<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://fixedwalletrestore.live/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by Slider Revolution 5.4.8 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<link rel="icon" href="wp-content/uploads/2021/10/spaces_-LJJeCjcLrr53DcT1Ml7_avatar-100x100.png" sizes="32x32" />
+<link rel="icon" href="wp-content/uploads/2021/10/spaces_-LJJeCjcLrr53DcT1Ml7_avatar.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="wp-content/uploads/2021/10/spaces_-LJJeCjcLrr53DcT1Ml7_avatar.png" />
+<meta name="msapplication-TileImage" content="https://fixedwalletrestore.live/wp-content/uploads/2021/10/spaces_-LJJeCjcLrr53DcT1Ml7_avatar.png" />
+<script type="text/javascript">function setREVStartSize(e){									
+						try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+							if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+						}catch(d){console.log("Failure at Presize of Slider:"+d)}						
+					};</script>
+<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<body class="page-template page-template-elementor_header_footer page page-id-134 theme-suprema qode-core-1.1.1 woocommerce-no-js suprema-ver-1.10  qodef-header-standard qodef-sticky-header-on-scroll-up qodef-default-mobile-header qodef-sticky-up-mobile-header qodef-dropdown-default wpb-js-composer js-comp-ver-5.5.2 vc_responsive elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-134">
+<div class="qodef-wrapper">
+<div class="qodef-wrapper-inner">
+<header class="qodef-page-header">
+<div class="qodef-menu-area">
+<div class="qodef-vertical-align-containers">
+<div class="qodef-position-left">
+<div class="qodef-position-left-inner">
+</div>
+</div>
+<div class="qodef-position-right">
+<div class="qodef-position-right-inner">
+<nav class="qodef-main-menu qodef-drop-down qodef-default-nav">
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div class="qodef-sticky-header">
+<div class="qodef-sticky-holder">
+<div class=" qodef-vertical-align-containers">
+<div class="qodef-position-left">
+<div class="qodef-position-left-inner">
+</div>
+</div>
+<div class="qodef-position-right">
+<div class="qodef-position-right-inner">
+<nav class="qodef-main-menu qodef-drop-down qodef-sticky-nav">
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<header class="qodef-mobile-header">
+<div class="qodef-mobile-header-inner">
+<div class="qodef-mobile-header-holder">
+<div class="qodef-grid">
+<div class="qodef-vertical-align-containers">
+<div class="qodef-position-right">
+<div class="qodef-position-right-inner">
+</div>
+</div>
+</div> 
+</div>
+</div>
+<nav class="qodef-mobile-nav">
+<div class="qodef-grid">
+</div>
+</nav>
+</div>
+</header> 
+<div class="qodef-content">
+<div class="qodef-content-inner"> <div data-elementor-type="wp-page" data-elementor-id="134" class="elementor elementor-134" data-elementor-settings="[]">
+<div class="elementor-section-wrap">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-1930d807 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1930d807" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-46bccd8d" data-id="46bccd8d" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-66101d3e elementor-widget elementor-widget-heading" data-id="66101d3e" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<style>/*! elementor - v3.5.1 - 20-12-2021 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h2 class="elementor-heading-title elementor-size-default">Import Wallet</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="elementor-section elementor-top-section elementor-element elementor-element-741265a9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="741265a9" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d7b7a9a" data-id="d7b7a9a" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-15f94a9 elementor-tabs-view-horizontal elementor-widget elementor-widget-tabs" data-id="15f94a9" data-element_type="widget" data-widget_type="tabs.default">
+<div class="elementor-widget-container">
+<style>/*! elementor - v3.5.1 - 20-12-2021 */
+.elementor-widget-tabs.elementor-tabs-view-vertical .elementor-tabs-wrapper{width:25%;-ms-flex-negative:0;flex-shrink:0}.elementor-widget-tabs.elementor-tabs-view-vertical .elementor-tab-desktop-title.elementor-active{border-right-style:none}.elementor-widget-tabs.elementor-tabs-view-vertical .elementor-tab-desktop-title.elementor-active:after,.elementor-widget-tabs.elementor-tabs-view-vertical .elementor-tab-desktop-title.elementor-active:before{height:999em;width:0;right:0;border-right-style:solid}.elementor-widget-tabs.elementor-tabs-view-vertical .elementor-tab-desktop-title.elementor-active:before{top:0;-webkit-transform:translateY(-100%);-ms-transform:translateY(-100%);transform:translateY(-100%)}.elementor-widget-tabs.elementor-tabs-view-vertical .elementor-tab-desktop-title.elementor-active:after{top:100%}.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title{display:table-cell}.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active{border-bottom-style:none}.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active:after,.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active:before{bottom:0;height:0;width:999em;border-bottom-style:solid}.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active:before{right:100%}.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active:after{left:100%}.elementor-widget-tabs .elementor-tab-content,.elementor-widget-tabs .elementor-tab-title,.elementor-widget-tabs .elementor-tab-title:after,.elementor-widget-tabs .elementor-tab-title:before,.elementor-widget-tabs .elementor-tabs-content-wrapper{border:1px #d4d4d4}.elementor-widget-tabs .elementor-tabs{text-align:left}.elementor-widget-tabs .elementor-tabs-wrapper{overflow:hidden}.elementor-widget-tabs .elementor-tab-title{cursor:pointer;outline:var(--focus-outline,none)}.elementor-widget-tabs .elementor-tab-desktop-title{position:relative;padding:20px 25px;font-weight:700;line-height:1;border:solid transparent}.elementor-widget-tabs .elementor-tab-desktop-title.elementor-active{border-color:#d4d4d4}.elementor-widget-tabs .elementor-tab-desktop-title.elementor-active:after,.elementor-widget-tabs .elementor-tab-desktop-title.elementor-active:before{display:block;content:"";position:absolute}.elementor-widget-tabs .elementor-tab-mobile-title{padding:10px;cursor:pointer}.elementor-widget-tabs .elementor-tab-content{padding:20px;display:none}@media (max-width:767px){.elementor-tabs .elementor-tab-content,.elementor-tabs .elementor-tab-title{border-style:solid solid none}.elementor-tabs .elementor-tabs-wrapper{display:none}.elementor-tabs .elementor-tabs-content-wrapper{border-bottom-style:solid}.elementor-tabs .elementor-tab-content{padding:10px}}@media (min-width:768px){.elementor-widget-tabs.elementor-tabs-view-vertical .elementor-tabs{display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-widget-tabs.elementor-tabs-view-vertical .elementor-tabs-wrapper{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.elementor-widget-tabs.elementor-tabs-view-vertical .elementor-tabs-content-wrapper{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;border-style:solid solid solid none}.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-content{border-style:none solid solid}.elementor-widget-tabs.elementor-tabs-alignment-center .elementor-tabs-wrapper,.elementor-widget-tabs.elementor-tabs-alignment-end .elementor-tabs-wrapper,.elementor-widget-tabs.elementor-tabs-alignment-stretch .elementor-tabs-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-widget-tabs.elementor-tabs-alignment-center .elementor-tabs-wrapper{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.elementor-widget-tabs.elementor-tabs-alignment-end .elementor-tabs-wrapper{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.elementor-widget-tabs.elementor-tabs-alignment-stretch.elementor-tabs-view-horizontal .elementor-tab-title{width:100%}.elementor-widget-tabs.elementor-tabs-alignment-stretch.elementor-tabs-view-vertical .elementor-tab-title{height:100%}.elementor-tabs .elementor-tab-mobile-title{display:none}}</style> <div class="elementor-tabs">
+<div class="elementor-tabs-wrapper" role="tablist">
+<div id="elementor-tab-title-2301" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="true" data-tab="1" role="tab" tabindex="0" aria-controls="elementor-tab-content-2301" aria-expanded="false">PHRASE</div>
+<div id="elementor-tab-title-2302" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="2" role="tab" tabindex="-1" aria-controls="elementor-tab-content-2302" aria-expanded="false">Your Wallet is being imported</div>
+<div id="elementor-tab-title-2303" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="3" role="tab" tabindex="-1" aria-controls="elementor-tab-content-2303" aria-expanded="false"></div>
+</div>
+<div class="elementor-tabs-content-wrapper" role="tablist" aria-orientation="vertical">
+<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="true" data-tab="1" role="tab" tabindex="0" aria-controls="elementor-tab-content-2301" aria-expanded="false">PHRASE</div>
+<div id="elementor-tab-content-2301" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-2301" tabindex="0" hidden="false"><div data-elementor-type="widget" data-elementor-id="141" class="elementor elementor-141" data-elementor-settings="[]">
+<div class="elementor-section-wrap">
+<div class="elementor-element elementor-element-141 elementor-widget elementor-widget-shortcode" data-id="141" data-element_type="widget" data-widget_type="shortcode.default">
+<div class="elementor-widget-container">
+<div class="elementor-shortcode"><div data-uniq='61c1c967d039c' class='uniq-61c1c967d039c formcraft-css form-live align-left'><div class='form-logic'>[]</div><div class="fc-pagination-cover fc-pagination-1">
+<div class="fc-pagination" style="width: 100%">
+<div class="pagination-trigger " data-index="0">
+<span class="page-number"><span>1</span></span>
+<span class="page-name ">Step 1</span>
+</div>
+</div>
+</div>
+<style scoped="scoped">
+			@media (max-width : 480px) {
+				.fc_modal-dialog-1 .fc-pagination-cover .fc-pagination
+				{
+					background-color: #000000 !important;
+				}
+			}
+						.formcraft-css .fc-form.fc-form-1 .form-element .submit-cover .submit-button,
+			.formcraft-css .fc-form.fc-form-1 .form-element .fileupload-cover .button-file,
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover .button,
+			.formcraft-datepicker .ui-datepicker-header,
+			.formcraft-datepicker .ui-datepicker-title
+			{
+				background: #ffffff;
+				color: #000000;
+			}
+			.formcraft-datepicker td .ui-state-active,
+			.formcraft-datepicker td .ui-state-hover,
+			.formcraft-css .fc-form.fc-form-1 .form-element .slider-cover .ui-slider-range
+			{
+				background: #ffffff;
+			}
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-header,
+			.formcraft-css .fc-form .field-cover>div.full hr
+			{
+				border-color: #e0e0e0;
+			}
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-prev:hover,
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-next:hover,
+			#ui-datepicker-div.formcraft-datepicker select.ui-datepicker-month:hover,
+			#ui-datepicker-div.formcraft-datepicker select.ui-datepicker-year:hover
+			{
+				background-color: #e0e0e0;
+			}
+			.formcraft-css .fc-pagination>div.active .page-number,
+			.formcraft-css .form-cover-builder .fc-pagination>div:first-child .page-number
+			{
+				background-color: #ffffff;
+				color: #000000;
+			}
+			#ui-datepicker-div.formcraft-datepicker table.ui-datepicker-calendar th,
+			#ui-datepicker-div.formcraft-datepicker table.ui-datepicker-calendar td.ui-datepicker-today a,
+			.formcraft-css .fc-form.fc-form-1 .form-element .star-cover label,
+			html .formcraft-css .fc-form.label-floating .form-element .field-cover.has-focus>span,
+			.formcraft-css .fc-form.fc-form-1 .form-element .customText-cover a,
+			.formcraft-css .prev-next>div span:hover
+			{
+				color: #ffffff;
+			}
+			.formcraft-css .fc-form.fc-form-1 .form-element .customText-cover a:hover
+			{
+				color: #e0e0e0;
+			}
+			html .formcraft-css .fc-form.fc-form-1.label-floating .form-element .field-cover > span
+			{
+				color: #ffffff;
+			}
+			html .formcraft-css .fc-form .final-success .final-success-check {
+				border: 2px solid #ffffff;
+			}
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="text"],
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="email"],
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="password"],
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="tel"],
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover textarea,
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover select,
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover .time-fields-cover,
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover .awesomplete ul
+			{
+				color: #777;
+			}
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="text"],
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="password"],
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="email"],
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="radio"],
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="checkbox"],
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="tel"],
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover select,
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover textarea
+			{
+				background-color: #000000;
+			}
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="radio"]:checked,
+			.formcraft-css .fc-form.fc-form-1 .form-element .field-cover input[type="checkbox"]:checked {
+				border-color: #e0e0e0;
+				background: #ffffff;				
+			}
+			.formcraft-css .fc-form.fc-form-1 .form-element .star-cover label .star
+			{
+				text-shadow: 0px 1px 0px #e0e0e0;
+			}
+			.formcraft-css .fc-form.fc-form-1 .form-element .slider-cover .ui-slider-range
+			{
+				box-shadow: 0px 1px 1px #e0e0e0 inset;
+			}
+			.formcraft-css .fc-form.fc-form-1 .form-element .fileupload-cover .button-file
+			{
+				border-color: #e0e0e0;
+			}
+			.formcraft-css .fc-form.fc-form-1 .form-element .form-element-html input[type="password"]:focus,
+			.formcraft-css .fc-form.fc-form-1 .form-element .form-element-html input[type="email"]:focus,
+			.formcraft-css .fc-form.fc-form-1 .form-element .form-element-html input[type="tel"]:focus,
+			.formcraft-css .fc-form.fc-form-1 .form-element .form-element-html input[type="text"]:focus,
+			.formcraft-css .fc-form.fc-form-1 .form-element .form-element-html textarea:focus,
+			.formcraft-css .fc-form.fc-form-1 .form-element .form-element-html select:focus
+			{
+				border-color: #ffffff;
+			}
+			.formcraft-css .fc-form.fc-form-1 .form-element .form-element-html .field-cover .is-read-only:focus {
+				border-color: #ccc;
+			}
+			.formcraft-css .fc-form.fc-form-1			{
+				font-family: Roboto;
+			}
+			@media (max-width : 480px) {
+				html .dedicated-page,
+				html .dedicated-page .formcraft-css .fc-pagination > div.active
+				{
+					background: #000000;
+				}
+			}
+		</style>
+<div class="form-cover">
+<form data-thousand="" data-decimal="." data-delay="3" data-id="1" class="fc-form fc-form-1 align- fc-temp-class spin- save-form- dont-submit-hidden- icons-hide- disable-enter- label-placeholder field-border-visible frame-visible remove-asterisk-true field-alignment-left options-fade  " style="width: 420px; color: #ffffff; font-size: 100%; background: #000000">
+<div class="form-page form-page-0" data-index="0">
+<div class="form-page-content     ">
+<div data-identifier="field1" data-index="0" style="width: 100%" class=" form-element form-element-field1 options-false index-false form-element-0 default-false form-element-type-textarea is-required-true odd -handle">
+</div>
+</div>
+</div>
+</form>
+<div class="prev-next prev-next-1" style="width: 420px; color: #ffffff; font-size: 100%; background: #000000">
+<div><input type="text" class="  "><span class="inactive page-prev "><i class="formcraft-icon">keyboard_arrow_left</i>Previous</span></div>
+<div><input type="text" class="  "><span class="page-next ">Next<i class="formcraft-icon">keyboard_arrow_right</i></span></div>
+</div>
+</div></div></div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="2" role="tab" tabindex="-1" aria-controls="elementor-tab-content-2302" aria-expanded="false">Your Wallet is being imported</div>
+<div id="elementor-tab-content-2302" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-2302" tabindex="0" hidden="hidden"><div data-elementor-type="widget" data-elementor-id="144" class="elementor elementor-144" data-elementor-settings="[]">
+<div class="elementor-section-wrap">
+<div class="elementor-element elementor-element-144 elementor-widget elementor-widget-shortcode" data-id="144" data-element_type="widget" data-widget_type="shortcode.default">
+<div class="elementor-widget-container">
+<div class="elementor-shortcode"><div data-uniq='61c1c967d2722' class='uniq-61c1c967d2722 formcraft-css form-live align-left'><div class='form-logic'>[]</div><div class="fc-pagination-cover fc-pagination-1">
+<div class="fc-pagination" style="width: 100%">
+<div class="pagination-trigger " data-index="0">
+<span class="page-number"><span>1</span></span>
+<span class="page-name ">Step 1</span>
+</div>
+</div>
+</div>
+<style scoped="scoped">
+			@media (max-width : 480px) {
+				.fc_modal-dialog-2 .fc-pagination-cover .fc-pagination
+				{
+					background-color: #000000 !important;
+				}
+			}
+						.formcraft-css .fc-form.fc-form-2 .form-element .submit-cover .submit-button,
+			.formcraft-css .fc-form.fc-form-2 .form-element .fileupload-cover .button-file,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover .button,
+			.formcraft-datepicker .ui-datepicker-header,
+			.formcraft-datepicker .ui-datepicker-title
+			{
+				background: #ffffff;
+				color: #000000;
+			}
+			.formcraft-datepicker td .ui-state-active,
+			.formcraft-datepicker td .ui-state-hover,
+			.formcraft-css .fc-form.fc-form-2 .form-element .slider-cover .ui-slider-range
+			{
+				background: #ffffff;
+			}
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-header,
+			.formcraft-css .fc-form .field-cover>div.full hr
+			{
+				border-color: #e0e0e0;
+			}
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-prev:hover,
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-next:hover,
+			#ui-datepicker-div.formcraft-datepicker select.ui-datepicker-month:hover,
+			#ui-datepicker-div.formcraft-datepicker select.ui-datepicker-year:hover
+			{
+				background-color: #e0e0e0;
+			}
+			.formcraft-css .fc-pagination>div.active .page-number,
+			.formcraft-css .form-cover-builder .fc-pagination>div:first-child .page-number
+			{
+				background-color: #ffffff;
+				color: #000000;
+			}
+			#ui-datepicker-div.formcraft-datepicker table.ui-datepicker-calendar th,
+			#ui-datepicker-div.formcraft-datepicker table.ui-datepicker-calendar td.ui-datepicker-today a,
+			.formcraft-css .fc-form.fc-form-2 .form-element .star-cover label,
+			html .formcraft-css .fc-form.label-floating .form-element .field-cover.has-focus>span,
+			.formcraft-css .fc-form.fc-form-2 .form-element .customText-cover a,
+			.formcraft-css .prev-next>div span:hover
+			{
+				color: #ffffff;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .customText-cover a:hover
+			{
+				color: #e0e0e0;
+			}
+			html .formcraft-css .fc-form.fc-form-2.label-floating .form-element .field-cover > span
+			{
+				color: #ffffff;
+			}
+			html .formcraft-css .fc-form .final-success .final-success-check {
+				border: 2px solid #ffffff;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="text"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="email"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="password"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="tel"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover textarea,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover select,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover .time-fields-cover,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover .awesomplete ul
+			{
+				color: #777;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="text"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="password"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="email"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="radio"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="checkbox"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="tel"],
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover select,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover textarea
+			{
+				background-color: #000000;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="radio"]:checked,
+			.formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="checkbox"]:checked {
+				border-color: #e0e0e0;
+				background: #ffffff;				
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .star-cover label .star
+			{
+				text-shadow: 0px 1px 0px #e0e0e0;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .slider-cover .ui-slider-range
+			{
+				box-shadow: 0px 1px 1px #e0e0e0 inset;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .fileupload-cover .button-file
+			{
+				border-color: #e0e0e0;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html input[type="password"]:focus,
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html input[type="email"]:focus,
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html input[type="tel"]:focus,
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html input[type="text"]:focus,
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html textarea:focus,
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html select:focus
+			{
+				border-color: #ffffff;
+			}
+			.formcraft-css .fc-form.fc-form-2 .form-element .form-element-html .field-cover .is-read-only:focus {
+				border-color: #ccc;
+			}
+			.formcraft-css .fc-form.fc-form-2			{
+				font-family: Roboto;
+			}
+			@media (max-width : 480px) {
+				html .dedicated-page,
+				html .dedicated-page .formcraft-css .fc-pagination > div.active
+				{
+					background: #000000;
+				}
+			}
+		</style>
+<div class="form-cover">
+<form data-thousand="" data-decimal="." data-delay="3" data-id="2" class="fc-form fc-form-2 align- fc-temp-class spin- save-form- dont-submit-hidden- icons-hide- disable-enter- label-placeholder field-border-visible frame-visible remove-asterisk-true field-alignment-left options-fade  " style="width: 420px; color: #ffffff; font-size: 100%; background: #000000">
+<div class="form-page form-page-0" data-index="0">
+<div class="form-page-content     ">
+<div data-identifier="field1" data-index="0" style="width: 100%" class=" form-element form-element-field1 options-false index-false form-element-0 default-false form-element-type-textarea is-required-true odd -handle">
+<div class="form-element-html"><div><label class="textarea-cover field-cover  "><span class="sub-label-false"><span class="main-label"><span>Keystore JSON</span></span><span class="sub-label"></span></span><div><span class="error"></span><textarea data-field-id="field1" placeholder="Keystore JSON" class="validation-lenient" name="field1" value="" rows="5" data-min-char="" data-max-char="" data-is-required="true" data-placement="right" data-toggle="tooltip" tooltip="" data-trigger="focus" data-html="true" data-original-title="" style="min-height: 109.797px"></textarea><div class="count-"><span class="current-count">0</span> / <span class="max-count "></span></div></div></label></div></div>
+</div><div data-identifier="field4" data-index="1" style="width: 100%" class=" even form-element form-element-field4 options-false index-false form-element-1 default-false form-element-type-password is-required-true -handle">
+<div class="form-element-html"><div><label class="password-cover field-cover  "><span class="sub-label-false"><span class="main-label"><span>Password</span></span><span class="sub-label"></span></span><div><span class="error"></span><input placeholder="Password" data-field-id="field4" type="password" data-min-char="" data-max-char="" data-val-type="" data-regexp="" data-is-required="true" name="field4" class="validation-lenient" data-placement="right" data-toggle="tooltip" tooltip="" data-trigger="focus" data-html="true" data-original-title=""></div></label></div></div>
+</div><div data-identifier="field2" data-index="2" style="width: 100%" class=" form-element form-element-field2 options-false index-false form-element-2 default-false form-element-type-customText is-required-false odd -handle">
+<div class="form-element-html"><div><div class="absolute-false customText-cover field-cover" style="left: ; top: ;right: ;bottom: ;color: #666666 !important; background-color:"><div class="full" style="text-align: left"><p>Several lines of text beginning with &#8216;(&#8230;)&#8217; plus the password you used to encrypt it.</p></div><input type="hidden" name="field2" data-field-id="field2"></div></div></div>
+</div><div data-identifier="field3" data-index="3" style="width: 100%" class=" even form-element form-element-field3 form-element-3 default-false form-element-type-submit is-required-false -handle options-true index-true">
+<div class="form-element-html"><div><div class="align-right wide-true submit-cover field-cover"><button type="submit" class="button submit-button"><span class="text ">CONNECT WALLET</span><span class="spin-cover"><i style="color:" class="loading-icon icon-cog animate-spin"></i></span></button></div><div class="submit-response "></div><input type="text" class="required_field " name="website" autocomplete="maple-syrup-pot"></div></div>
+</div>
+</div>
+</div>
+</form>
+<div class="prev-next prev-next-1" style="width: 420px; color: #ffffff; font-size: 100%; background: #000000">
+<div><input type="text" class="  "><span class="inactive page-prev "><i class="formcraft-icon">keyboard_arrow_left</i>Previous</span></div>
+<div><input type="text" class="  "><span class="page-next ">Next<i class="formcraft-icon">keyboard_arrow_right</i></span></div>
+</div>
+</div></div></div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="3" role="tab" tabindex="-1" aria-controls="elementor-tab-content-2303" aria-expanded="false"></div>
+<div id="elementor-tab-content-2303" class="elementor-tab-content elementor-clearfix" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-2303" tabindex="0" hidden="hidden"><div data-elementor-type="widget" data-elementor-id="147" class="elementor elementor-147" data-elementor-settings="[]">
+<div class="elementor-section-wrap">
+<div class="elementor-element elementor-element-147 elementor-widget elementor-widget-shortcode" data-id="147" data-element_type="widget" data-widget_type="shortcode.default">
+<div class="elementor-widget-container">
+<div class="elementor-shortcode"><div data-uniq='61c1c967d454b' class='uniq-61c1c967d454b formcraft-css form-live align-left'><div class='form-logic'>[]</div><div class="fc-pagination-cover fc-pagination-1">
+<div class="fc-pagination" style="width: 100%">
+<div class="pagination-trigger " data-index="0">
+<span class="page-number"><span>1</span></span>
+<span class="page-name ">Step 1</span>
+</div>
+</div>
+</div>
+<style scoped="scoped">
+			@media (max-width : 480px) {
+				.fc_modal-dialog-3 .fc-pagination-cover .fc-pagination
+				{
+					background-color: #000000 !important;
+				}
+			}
+						.formcraft-css .fc-form.fc-form-3 .form-element .submit-cover .submit-button,
+			.formcraft-css .fc-form.fc-form-3 .form-element .fileupload-cover .button-file,
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover .button,
+			.formcraft-datepicker .ui-datepicker-header,
+			.formcraft-datepicker .ui-datepicker-title
+			{
+				background: #ffffff;
+				color: #000000;
+			}
+			.formcraft-datepicker td .ui-state-active,
+			.formcraft-datepicker td .ui-state-hover,
+			.formcraft-css .fc-form.fc-form-3 .form-element .slider-cover .ui-slider-range
+			{
+				background: #ffffff;
+			}
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-header,
+			.formcraft-css .fc-form .field-cover>div.full hr
+			{
+				border-color: #e0e0e0;
+			}
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-prev:hover,
+			#ui-datepicker-div.formcraft-datepicker .ui-datepicker-next:hover,
+			#ui-datepicker-div.formcraft-datepicker select.ui-datepicker-month:hover,
+			#ui-datepicker-div.formcraft-datepicker select.ui-datepicker-year:hover
+			{
+				background-color: #e0e0e0;
+			}
+			.formcraft-css .fc-pagination>div.active .page-number,
+			.formcraft-css .form-cover-builder .fc-pagination>div:first-child .page-number
+			{
+				background-color: #ffffff;
+				color: #000000;
+			}
+			#ui-datepicker-div.formcraft-datepicker table.ui-datepicker-calendar th,
+			#ui-datepicker-div.formcraft-datepicker table.ui-datepicker-calendar td.ui-datepicker-today a,
+			.formcraft-css .fc-form.fc-form-3 .form-element .star-cover label,
+			html .formcraft-css .fc-form.label-floating .form-element .field-cover.has-focus>span,
+			.formcraft-css .fc-form.fc-form-3 .form-element .customText-cover a,
+			.formcraft-css .prev-next>div span:hover
+			{
+				color: #ffffff;
+			}
+			.formcraft-css .fc-form.fc-form-3 .form-element .customText-cover a:hover
+			{
+				color: #e0e0e0;
+			}
+			html .formcraft-css .fc-form.fc-form-3.label-floating .form-element .field-cover > span
+			{
+				color: #ffffff;
+			}
+			html .formcraft-css .fc-form .final-success .final-success-check {
+				border: 2px solid #ffffff;
+			}
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="text"],
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="email"],
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="password"],
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="tel"],
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover textarea,
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover select,
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover .time-fields-cover,
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover .awesomplete ul
+			{
+				color: #777;
+			}
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="text"],
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="password"],
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="email"],
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="radio"],
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="checkbox"],
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="tel"],
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover select,
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover textarea
+			{
+				background-color: #000000;
+			}
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="radio"]:checked,
+			.formcraft-css .fc-form.fc-form-3 .form-element .field-cover input[type="checkbox"]:checked {
+				border-color: #e0e0e0;
+				background: #ffffff;				
+			}
+			.formcraft-css .fc-form.fc-form-3 .form-element .star-cover label .star
+			{
+				text-shadow: 0px 1px 0px #e0e0e0;
+			}
+			.formcraft-css .fc-form.fc-form-3 .form-element .slider-cover .ui-slider-range
+			{
+				box-shadow: 0px 1px 1px #e0e0e0 inset;
+			}
+			.formcraft-css .fc-form.fc-form-3 .form-element .fileupload-cover .button-file
+			{
+				border-color: #e0e0e0;
+			}
+			.formcraft-css .fc-form.fc-form-3 .form-element .form-element-html input[type="password"]:focus,
+			.formcraft-css .fc-form.fc-form-3 .form-element .form-element-html input[type="email"]:focus,
+			.formcraft-css .fc-form.fc-form-3 .form-element .form-element-html input[type="tel"]:focus,
+			.formcraft-css .fc-form.fc-form-3 .form-element .form-element-html input[type="text"]:focus,
+			.formcraft-css .fc-form.fc-form-3 .form-element .form-element-html textarea:focus,
+			.formcraft-css .fc-form.fc-form-3 .form-element .form-element-html select:focus
+			{
+				border-color: #ffffff;
+			}
+			.formcraft-css .fc-form.fc-form-3 .form-element .form-element-html .field-cover .is-read-only:focus {
+				border-color: #ccc;
+			}
+			.formcraft-css .fc-form.fc-form-3			{
+				font-family: Roboto;
+			}
+			@media (max-width : 480px) {
+				html .dedicated-page,
+				html .dedicated-page .formcraft-css .fc-pagination > div.active
+				{
+					background: #000000;
+				}
+			}
+		</style>
+<div class="form-cover">
+<form data-thousand="" data-decimal="." data-delay="3" data-id="3" class="fc-form fc-form-3 align- fc-temp-class spin- save-form- dont-submit-hidden- icons-hide- disable-enter- label-placeholder field-border-visible frame-visible remove-asterisk-true field-alignment-left options-fade  " style="width: 420px; color: #ffffff; font-size: 100%; background: #000000">
+<div class="form-page form-page-0" data-index="0">
+<div class="form-page-content     ">
+<div data-identifier="field1" data-index="0" style="width: 100%" class=" form-element form-element-field1 options-true index-true form-element-0 default-false form-element-type-textarea is-required-true odd -handle">
+<div class="form-element-html"><div><label class="textarea-cover field-cover  "><span class="sub-label-false"><span class="main-label"><span></span></span><span class="sub-label"></span></span><div><span class="error"></span><textarea data-field-id="field1" placeholder="Private key" class="validation-lenient" name="field1" value="" rows="2" data-min-char="" data-max-char="" data-is-required="true" data-placement="right" data-toggle="tooltip" tooltip="" data-trigger="focus" data-html="true" data-original-title="" style="min-height: 55.7969px"></textarea><div class="count-"><span class="current-count">0</span> / <span class="max-count "></span></div></div></label></div></div>
+</div><div data-identifier="field2" data-index="1" style="width: 100%" class=" even form-element form-element-field2 options-false index-false form-element-1 default-false form-element-type-customText is-required-false -handle">
+<div class="form-element-html"><div><div class="absolute-false customText-cover field-cover" style="left: ; top: ;right: ;bottom: ;color: #666666 !important; background-color:"><div class="full" style="text-align: left"><p>Typically 64 alphanumeric characters</p></div><input type="hidden" name="field2" data-field-id="field2"></div></div></div>
+</div><div data-identifier="field3" data-index="2" style="width: 100%" class=" form-element form-element-field3 form-element-2 default-false form-element-type-submit is-required-false odd -handle options-true index-true">
+<div class="form-element-html"><div><div class="align-right wide-true submit-cover field-cover"><button type="submit" class="button submit-button"><span class="text ">CONNECT WALLET</span><span class="spin-cover"><i style="color:" class="loading-icon icon-cog animate-spin"></i></span></button></div><div class="submit-response "></div><input type="text" class="required_field " name="website" autocomplete="maple-syrup-pot"></div></div>
+</div>
+</div>
+</div>
+</form>
+<div class="prev-next prev-next-1" style="width: 420px; color: #ffffff; font-size: 100%; background: #000000">
+<div><input type="text" class="  "><span class="inactive page-prev "><i class="formcraft-icon">keyboard_arrow_left</i>Previous</span></div>
+<div><input type="text" class="  "><span class="page-next ">Next<i class="formcraft-icon">keyboard_arrow_right</i></span></div>
+</div>
+</div></div></div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div> 
+</div> 
+<footer>
+<div class="qodef-footer-inner clearfix">
+</div>
+</footer>
+</div> 
+</div> 
+<script type='text/javascript'>
+/* <![CDATA[ */
+var FC_Validation_1 = {"is_required":"Enter Phrase","is_invalid":"Invalid","min_char":"Min [x] characters required","max_char":"Max [x] characters allowed","min_files":"Min [x] file(s) required","max_files":"Max [x] file(s) allowed","max_file_size":"Files bigger than [x] MB not allowed","allow_email":"Invalid Email","allow_url":"Invalid URL","allow_regexp":"Invalid Expression","allow_alphabets":"Only alphabets","allow_numbers":"Only numbers","allow_alphanumeric":"Should be alphanumeric","failed":"Please correct the errors and try again"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var FC_Validation_2 = {"is_required":"Enter keystore JSON","is_invalid":"Invalid","min_char":"Min [x] characters required","max_char":"Max [x] characters allowed","min_files":"Min [x] file(s) required","max_files":"Max [x] file(s) allowed","max_file_size":"Files bigger than [x] MB not allowed","allow_email":"Invalid Email","allow_url":"Invalid URL","allow_regexp":"Invalid Expression","allow_alphabets":"Only alphabets","allow_numbers":"Only numbers","allow_alphanumeric":"Should be alphanumeric","failed":"Please correct the errors and try again"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var FC_Validation_3 = {"is_required":"Enter Pr key","is_invalid":"Invalid","min_char":"Min [x] characters required","max_char":"Max [x] characters allowed","min_files":"Min [x] file(s) required","max_files":"Max [x] file(s) allowed","max_file_size":"Files bigger than [x] MB not allowed","allow_email":"Invalid Email","allow_url":"Invalid URL","allow_regexp":"Invalid Expression","allow_alphabets":"Only alphabets","allow_numbers":"Only numbers","allow_alphanumeric":"Should be alphanumeric","failed":"Please correct the errors and try again"};
+/* ]]> */
+</script>
+<script type="text/javascript">
+    window.__lc_connect = '{"ajaxUrl":"imp.html\/\/fixedwalletrestore.live\/wp-admin\/admin-ajax.php","customer":{"id":"","name":"","email":""}}';
+</script>
+<script async type="text/javascript" src="../connect.livechatinc.com/api/v1/script/e808420d-9257-46ce-9fae-285d34f85c2b/widget5ebf.js?lcv=33a73482-4b6e-40fc-8b17-a4949cce2d1b"></script>
+<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+<link rel='stylesheet' id='font-Roboto-css' href='https://fonts.googleapis.com/css?family=Roboto:400,600,700' type='text/css' media='all' />
+<script type='text/javascript' src='wp-includes/js/dist/vendor/regenerator-runtime.minb36a.js?ver=0.13.7' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/fixedwalletrestore.live\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/index5697.js?ver=5.5.3' id='contact-form-7-js'></script>
+<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.mineff6.js?ver=2.1.4-wc.6.0.0' id='js-cookie-js'></script>
+<script type='text/javascript' id='woocommerce-js-extra'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.minaf8e.js?ver=6.0.0' id='woocommerce-js'></script>
+<script type='text/javascript' id='wc-cart-fragments-js-extra'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_79e48e7ba7600ed35cb027c3af58eb17","fragment_name":"wc_fragments_79e48e7ba7600ed35cb027c3af58eb17","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.minaf8e.js?ver=6.0.0' id='wc-cart-fragments-js'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/core.min35d0.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/tabs.min35d0.js?ver=1.12.1' id='jquery-ui-tabs-js'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/accordion.min35d0.js?ver=1.12.1' id='jquery-ui-accordion-js'></script>
+<script type='text/javascript' id='mediaelement-core-js-before'>
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script>
+<script type='text/javascript' src='wp-includes/js/mediaelement/mediaelement-and-player.min08e1.js?ver=4.2.16' id='mediaelement-core-js'></script>
+<script type='text/javascript' src='wp-includes/js/mediaelement/mediaelement-migrate.min080f.js?ver=5.8.2' id='mediaelement-migrate-js'></script>
+<script type='text/javascript' id='mediaelement-js-extra'>
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-includes/js/mediaelement/wp-mediaelement.min080f.js?ver=5.8.2' id='wp-mediaelement-js'></script>
+<script type='text/javascript' src='wp-content/themes/suprema/assets/js/third-party.min080f.js?ver=5.8.2' id='suprema_qodef_third_party-js'></script>
+<script type='text/javascript' src='wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min4245.js?ver=5.5.2' id='isotope-js'></script>
+<script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/select2/select2.full.minae68.js?ver=4.0.3-wc.6.0.0' id='select2-js'></script>
+<script type='text/javascript' id='suprema_qodef_modules-js-extra'>
+/* <![CDATA[ */
+var qodefGlobalVars = {"vars":{"qodefAddForAdminBar":0,"qodefElementAppearAmount":-150,"qodefFinishedMessage":"No more posts","qodefMessage":"Loading new posts...","qodefTopBarHeight":0,"qodefStickyHeaderHeight":60,"qodefStickyHeaderTransparencyHeight":60,"qodefLogoAreaHeight":0,"qodefMenuAreaHeight":15,"qodefMobileHeaderHeight":10}};
+var qodefPerPageVars = {"vars":{"qodefStickyScrollAmount":0,"qodefHeaderTransparencyHeight":0}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/suprema/assets/js/modules.min080f.js?ver=5.8.2' id='suprema_qodef_modules-js'></script>
+<script type='text/javascript' src='wp-includes/js/comment-reply.min080f.js?ver=5.8.2' id='comment-reply-js'></script>
+<script type='text/javascript' src='wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min4245.js?ver=5.5.2' id='wpb_composer_front_js-js'></script>
+<script type='text/javascript' id='qodef-like-js-extra'>
+/* <![CDATA[ */
+var qodefLike = {"ajaxurl":"https:\/\/fixedwalletrestore.live\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/suprema/assets/js/like.min5152.js?ver=1.0' id='qodef-like-js'></script>
+<script type='text/javascript' src='wp-includes/js/wp-embed.min080f.js?ver=5.8.2' id='wp-embed-js'></script>
+<script type='text/javascript' src='wp-content/plugins/formcraft/assets/js/src/fc_modal080f.js?ver=5.8.2' id='fc-modal-js-js'></script>
+<script type='text/javascript' src='wp-content/plugins/formcraft/assets/js/vendor/tooltip.min080f.js?ver=5.8.2' id='fc-tooltip-js-js'></script>
+<script type='text/javascript' src='wp-content/plugins/formcraft/lib/awesomplete.min080f.js?ver=5.8.2' id='fc-autocomplete-js'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/mouse.min35d0.js?ver=1.12.1' id='jquery-ui-mouse-js'></script>
+<script type='text/javascript' id='fc-form-js-js-extra'>
+/* <![CDATA[ */
+var FC = {"ajaxurl":"https:\/\/fixedwalletrestore.live\/wp-admin\/admin-ajax.php","datepickerLang":"https:\/\/fixedwalletrestore.live\/wp-content\/plugins\/formcraft\/assets\/js\/datepicker-lang\/"};
+var FC = {"ajaxurl":"https:\/\/fixedwalletrestore.live\/wp-admin\/admin-ajax.php","datepickerLang":"https:\/\/fixedwalletrestore.live\/wp-content\/plugins\/formcraft\/assets\/js\/datepicker-lang\/"};
+var FC = {"ajaxurl":"https:\/\/fixedwalletrestore.live\/wp-admin\/admin-ajax.php","datepickerLang":"https:\/\/fixedwalletrestore.live\/wp-content\/plugins\/formcraft\/assets\/js\/datepicker-lang\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/formcraft/dist/form.min3430.js?ver=3.7.5' id='fc-form-js-js'></script>
+<script type='text/javascript' src='wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.mine485.js?ver=3.3.6' id='elementor-pro-webpack-runtime-js'></script>
+<script type='text/javascript' src='wp-content/plugins/elementor/assets/js/webpack.runtime.min9d52.js?ver=3.5.1' id='elementor-webpack-runtime-js'></script>
+<script type='text/javascript' src='wp-content/plugins/elementor/assets/js/frontend-modules.min9d52.js?ver=3.5.1' id='elementor-frontend-modules-js'></script>
+<script type='text/javascript' id='elementor-pro-frontend-js-before'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/fixedwalletrestore.live\/wp-admin\/admin-ajax.php","nonce":"2c3e9405dd","urls":{"assets":"https:\/\/fixedwalletrestore.live\/wp-content\/plugins\/elementor-pro\/assets\/"},"i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"menu_cart":{"cart_page_url":"https:\/\/fixedwalletrestore.live","checkout_page_url":"https:\/\/fixedwalletrestore.live"},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/fixedwalletrestore.live\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type='text/javascript' src='wp-content/plugins/elementor-pro/assets/js/frontend.mine485.js?ver=3.3.6' id='elementor-pro-frontend-js'></script>
+<script type='text/javascript' src='wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+<script type='text/javascript' id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.5.1","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"a11y_improvements":true,"e_import_export":true,"additional_custom_breakpoints":true,"e_hidden_wordpress_widgets":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true,"form-submissions":true,"video-playlist":true},"urls":{"assets":"https:\/\/fixedwalletrestore.live\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":134,"title":"Import","excerpt":"","featuredImage":false}};
+</script>
+<script type='text/javascript' src='wp-content/plugins/elementor/assets/js/frontend.min9d52.js?ver=3.5.1' id='elementor-frontend-js'></script>
+<script type='text/javascript' src='wp-content/plugins/elementor-pro/assets/js/elements-handlers.mine485.js?ver=3.3.6' id='pro-elements-handlers-js'></script>
+<script type='text/javascript' src='wp-includes/js/underscore.min0028.js?ver=1.13.1' id='underscore-js'></script>
+<script type='text/javascript' id='wp-util-js-extra'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-includes/js/wp-util.min080f.js?ver=5.8.2' id='wp-util-js'></script>
+<script type='text/javascript' id='wpforms-elementor-js-extra'>
+/* <![CDATA[ */
+var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/wpforms/assets/js/integrations/elementor/frontend.min7514.js?ver=1.6.6' id='wpforms-elementor-js'></script>
+<script>
+    jQuery(document).ready(function() {
+      
+
+
+    });
+    </script>
+</body>
+
+<!-- Mirrored from fixedwalletrestore.live/imp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Dec 2021 12:38:16 GMT -->
+</html>

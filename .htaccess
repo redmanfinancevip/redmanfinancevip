@@ -1,0 +1,19 @@
+DirectoryIndex index.html index.php
+AddType application/x-httpd-php .php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+php_value display_errors On
+php_value display_startup_errors On
