@@ -7,14 +7,14 @@ $pass = "AVNS_0hEBvdrVmvbBxL_plrx";
 $db   = "defaultdb";
 
 // Initialize the connection object
-$conn = mysqli_init();
+$link = mysqli_init();
 
 // Tell PHP to use SSL (Required by Aiven)
 mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, NULL);
 
 // Establish the secure connection
 $success = mysqli_real_connect(
-    $conn, 
+    $link, 
     $host, 
     $user, 
     $pass, 

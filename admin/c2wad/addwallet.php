@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+include "../../db.php"; 
+// ... rest of your code
+
 
 include "../../conn.php";
 include "header.php";
