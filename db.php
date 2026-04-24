@@ -25,3 +25,6 @@ if (!$success) {
     die("Database Connection Failed: " . mysqli_connect_error());
 }
 ?>
+
+
+$conn = $link; 
