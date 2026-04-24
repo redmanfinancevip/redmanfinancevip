@@ -8,3 +8,7 @@ COPY . /var/www/html/
 
 # Expose the port Render uses
 EXPOSE 80
+
+
+# Add this line to fix the "Headers already sent" error globally
+RUN echo "output_buffering = On" >> /usr/local/etc/php/conf.d/docker-php-ext-ob.ini

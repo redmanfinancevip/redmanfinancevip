@@ -21,11 +21,9 @@ $success = mysqli_real_connect(
     MYSQLI_CLIENT_SSL
 );
 
-if (!$success) {
-    die("Database Connection Failed: " . mysqli_connect_error());
-}
+// ... your connection code ...
+    if (!$success) {
+        die("Database Connection Failed: " . mysqli_connect_error());
+    }
 
-$conn = $link; 
-?>
-
-
+    $conn = $link; // The bridge we built
