@@ -26,7 +26,8 @@ $success = mysqli_real_connect(
 if (!$success) {
     die("Database Connection Failed: " . mysqli_connect_error());
 }
+
+$conn = $link; 
 ?>
 
 
-$conn = $link; 
