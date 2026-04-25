@@ -149,14 +149,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
 
         // Prepare an insert statement
-        $sql = "INSERT INTO users (fname, email, username, password, refcode, referred, country, phone, zip, account) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (fname, lname, email, username, password, refcode, referred, country, phone, zip, account) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ssssssssss", $param_fname, $param_email, $param_username, $param_password, $param_refcode, $param_referred, $param_country, $param_phone, $param_zip, $param_account);
-            
+            // Added one "s" and $param_lname
+              mysqli_stmt_bind_param($stmt, "sssssssssss", $param_fname, $param_lname, $param_email, $param_username, $param_password, $param_refcode, $param_referred, $param_country, $param_phone, $param_zip, $param_account);
             // Set parameters
             $param_fname = $fname;
+            $param_lname = $lname; // Add this line!
             $param_email = $email;
             $param_username = $username;
             $param_password = $password;
