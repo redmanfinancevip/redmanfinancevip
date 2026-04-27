@@ -52,12 +52,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             try {
                 
                 $mail->isSMTP();
-                $mail->Host       = 'mail.redmanfinance.org.ng';
+                $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'support@redmanfinance.org.ng'; 
-                $mail->Password   = '!!i&yl!fatME'; 
-				$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
-				$mail->Port       = 465;   
+                $mail->Username = 'redmanfinancevip@gmail.com';
+                $mail->Password = 'ytxysdclkfdmvyan';
+				$mail->SMTPSecure = 'tls';
+				$mail->Port = 587;
                 
           
                 $mail->setFrom('support@redmanfinance.org.ng', 'Redman Finance');
