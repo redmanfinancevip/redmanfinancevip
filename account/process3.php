@@ -88,8 +88,9 @@ if(isset($_POST['submit'])){
     
     if(empty($msg)){
         $tnx = uniqid('tnx');
-        $sql = "INSERT INTO btc (account,usd,cointype,email,status,tnxid,type,referred)
-                VALUES ('$upname','$uamount','$ucurrency','$email','pending','$tnx','Deposit','$referred')";
+        $allamount = $uamount;
+        $sql = "INSERT INTO btc (account,usd,allamount,cointype,mode,email,status,tnxid,type,referred,plan)
+                VALUES ('$upname','$uamount','$allamount','$ucurrency','$ucurrency','$email','pending','$tnx','Deposit','$referred','$upname')";
         
         if (mysqli_query($link, $sql)) {
     
