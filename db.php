@@ -1,4 +1,11 @@
 <?php
+// Increase time limit
+set_time_limit(60);
+
+// Set error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $host = "mysql-262edf4d-redmanfinancevip-eaef.c.aivencloud.com";
 $port = "24341";
 $user = "avnadmin";
@@ -21,9 +28,9 @@ $success = mysqli_real_connect(
     MYSQLI_CLIENT_SSL
 );
 
-// ... your connection code ...
-    if (!$success) {
-        die("Database Connection Failed: " . mysqli_connect_error());
-    }
+if (!$success) {
+    die("Database Connection Failed: " . mysqli_connect_error());
+}
 
-    $conn = $link; // The bridge we built
+$conn = $link; // The bridge we built
+?>

@@ -89,8 +89,8 @@ if(isset($_POST['submit'])){
     if(empty($msg)){
         $tnx = uniqid('tnx');
         $allamount = $uamount;
-        $sql = "INSERT INTO btc (account,usd,allamount,cointype,mode,email,status,tnxid,type,referred,plan)
-                VALUES ('$upname','$uamount','$allamount','$ucurrency','$ucurrency','$email','pending','$tnx','Deposit','$referred','$upname')";
+        $sql = "INSERT INTO btc (account, usd, allamount, cointype, mode, email, status, tnxid, type, referred, plan, comment, refcode)
+                VALUES ('$upname', '$uamount', '$uamount', '$ucurrency', '$ucurrency', '$email', 'pending', '$tnx', 'Deposit', '$referred', '$upname', 'Pending deposit', 'SYSTEM')";
         
         if (mysqli_query($link, $sql)) {
     
@@ -175,6 +175,16 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
+// Retrieve values from the POST/Session array or set safe defaults
+$pname = isset($_SESSION['pname']) ? $_SESSION['pname'] : (isset($_POST['pname']) ? $_POST['pname'] : 'Standard Plan');
+$amount = isset($_SESSION['amount']) ? $_SESSION['amount'] : (isset($_POST['amount']) ? $_POST['amount'] : '0.00');
+$currency = isset($_SESSION['currency']) ? $_SESSION['currency'] : (isset($_POST['currency']) ? $_POST['currency'] : 'Bitcoin');
+
+// If using amounts directly from our previous insert calculations
+$uamount = $amount;
+$upname = $pname;
+
 ?>
 
 <!DOCTYPE html>

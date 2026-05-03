@@ -70,8 +70,8 @@ $date = $row['pdate'];
 $payday = $row['payday'];
 $lprofit = $row['lprofit'];
 
-$paypackage = new DateTime($payday);
- $payday = $paypackage->format('Y/m/d');
+// Safely handle text-based paydays without invoking the DateTime constructor
+// $payday remains as the string value from database
 
 			
 			if(isset($row['pdate']) &&  $row['pdate'] != '0' && isset($row['duration'])  && isset($row['increase'])  && isset($row['usd']) ){

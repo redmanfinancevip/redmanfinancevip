@@ -1,17 +1,21 @@
 <?php
-// Include config file
-include "../db.php";
-include "../config.php";
+ob_start(); // Starts the output buffer
+// Increase time for cloud database/email connection
+ini_set('max_execution_time', '300');
 
-// Load PHPMailer
+// Manually load the files you just pasted into this folder
 require 'Exception.php';
 require 'PHPMailer.php';
 require 'SMTP.php';
 
-$msg = "";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+
+include "../db.php";
+include "../config.php";
+
+$msg = "";
 
 // Define variables and initialize with empty values
 $lname = $fname = $username = $email = $password = $cpassword = $phone = "";
@@ -25,6 +29,7 @@ if(isset($_GET['ref'])){
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $verify_code = rand(100000, 999999);
 
     // Validate email
     if(empty(trim($_POST["email"]))){
@@ -149,11 +154,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
 
         // Prepare an insert statement
-        $sql = "INSERT INTO users (fname, lname, email, username, password, refcode, referred, country, phone, zip, account) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (fname, lname, email, username, password, refcode, referred, country, phone, zip, account, verify_code) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Added one "s" and $param_lname
-              mysqli_stmt_bind_param($stmt, "sssssssssss", $param_fname, $param_lname, $param_email, $param_username, $param_password, $param_refcode, $param_referred, $param_country, $param_phone, $param_zip, $param_account);
+              mysqli_stmt_bind_param($stmt, "ssssssssssss", $param_fname, $param_lname, $param_email, $param_username, $param_password, $param_refcode, $param_referred, $param_country, $param_phone, $param_zip, $param_account, $verify_code);
             // Set parameters
             $param_fname = $fname;
             $param_lname = $lname; // Add this line!
@@ -175,12 +180,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 try {
                     // Server settings
                     $mail->isSMTP();
-                    $mail->Host       = 'mail.redmanfinance.org.ng';
+                    $mail->SMTPDebug = 0; // Turn off output debugging
+                    $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth   = true;
-                    $mail->Username   = 'support@redmanfinance.org.ng'; 
-                    $mail->Password   = '!!i&yl!fatME'; 
-                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
-                    $mail->Port       = 465;   
+                    $mail->Username = 'redmanfinancevip@gmail.com';
+                    $mail->Password = 'ytxysdclkfdmvyan';
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            
+                    $mail->Port = 587;
+                    $mail->SMTPDebug = 3; // This will print a technical log on the screen
+                    $mail->Debugoutput = 'html';
+                    $mail->isHTML(true);                                  // Set email format to HTML
+                    $mail->Subject = 'Verify Your Account - Redman Finance';
                     
                     // Recipients
                     $mail->setFrom('support@redmanfinance.org.ng', 'Redman Finance');
@@ -191,67 +201,112 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $mail->Subject = 'Welcome to Redman Finance';
                     
                     // Email body with dark theme styling
+                    // Professional HTML Email Body
                     $mail->Body = '
                     <div style="background: #0D1627; color: #ffffff; padding: 20px; font-family: Arial, sans-serif;">
                         <div style="max-width: 600px; margin: 0 auto; border: 1px solid #f4d35e; border-radius: 5px;">
                             <div style="background: #1a2639; padding: 20px; text-align: center; border-bottom: 2px solid #f4d35e;">
-                                <img src="https://redmanfinance.org.ng/public/redman%20finance.svg" alt="Redman Finance" style="height: 50px;">
-                                <h2 style="color: #f4d35e; margin-top: 10px;">Welcome to Redman Finance</h2>
+                                <h2 style="color: #f4d35e;">Account Verification</h2>
                             </div>
-                            
-                            <div style="padding: 20px;">
-                                <p>Hello '.$fname.',</p>
-                                <p>Thank you for registering with Redman Finance. Your account has been successfully created.</p>
-                                
-                                <div style="background: #1a2639; padding: 15px; margin: 20px 0; border-left: 3px solid #f4d35e;">
-                                    <p style="margin: 0;">Username: <strong>'.$username.'</strong></p>
-                                    <p style="margin: 0;">Email: <strong>'.$email.'</strong></p>
-                                    <p style="margin: 0;">Account Type: <strong>'.$account_type.'</strong></p>
+                            <div style="padding: 30px; text-align: center; background: #ffffff; color: #333333;">
+                                <p style="font-size: 16px;">Thank you for joining Redman Finance. Use the code below to activate your account:</p>
+                                <div style="margin: 20px 0; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                                    <span style="font-size: 40px; font-weight: bold; letter-spacing: 10px; color: #0b132b;">' . $verify_code . '</span>
                                 </div>
-                                
-                                <p>Redman Finance is the future of investment. Invite your family and friends to join, and you will earn bonus.</p>
-                                <p>Your funds are 100% safe with Redman Finance, we guarantee you a profitable investment.</p>
-                                
-                                <p style="margin-top: 20px;">
-                                    <a href="https://redmanfinance.org.ng/login.php" style="background-color: #f4d35e; color: #0D1627; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold;">Login to Your Account</a>
-                                </p>
+                                <p style="font-size: 14px; color: #666;">This code will expire shortly. If you did not request this, please ignore this email.</p>
                             </div>
-                            
-                            <div style="background: #1a2639; padding: 15px; text-align: center; border-top: 1px solid #f4d35e; font-size: 12px;">
-                                <p>© '.date('Y').' Redman Finance. All rights reserved.</p>
-                                <p>This is an automated message, please do not reply directly to this email.</p>
+                            <div style="background: #1a2639; padding: 15px; text-align: center; color: #f4d35e; font-size: 12px;">
+                                <p>© ' . date("Y") . ' Redman Finance. Institutional Asset Management.</p>
                             </div>
                         </div>
                     </div>';
                     
-                    $mail->AltBody = "Welcome to Redman Finance\n\nHello $fname,\n\nThank you for registering with Redman Finance. Your account has been successfully created.\n\nUsername: $username\nEmail: $email\nAccount Type: $account_type\n\nRedman Finance is the future of investment. Invite your family and friends to join, and you will earn bonus.\n\nLogin to your account: https://redmanfinance.org.ng/login.php\n\n© ".date('Y')." Redman Finance. All rights reserved.";
+                    $mail->AltBody = 'Your verification code is: ' . $verify_code;
+                    $mail->SMTPDebug = 2; // This will print the full conversation with Google on your screen
                     
                     $mail->send();
                     
                     $msg = "Registration successful! We've sent a welcome email to your address.";
                     
-                    // Redirect to login page
-                    header("Location: login.php?success");
-                    exit();
-                    
                 } catch (Exception $e) {
-                    $msg = "Registration successful, but we couldn't send a welcome email. Please contact support.";
-                    // Still redirect since registration was successful
-                    header("Location: login.php?success");
-                    exit();
+                    $msg = "Registration failed. Please try again.";
                 }
-            } else {
-                $msg = "Something went wrong. Please try again later.";
-            }
+                    
+                    // Redirect to login page
+                    // Advanced HTML Email Block
+        $email = $_POST['email']; // Make sure this matches your form input name
+        $new_code = $verify_code; // If your code variable is named something else, change it here 
+        $message = "
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                .wrapper { background-color: #0f111a; padding: 40px; font-family: sans-serif; }
+                .container { max-width: 500px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; }
+                .header { background: #1a1a1a; padding: 30px; text-align: center; }
+                .content { padding: 40px; text-align: center; color: #333333; }
+                .code-box { background: #f4f7ff; border: 2px dashed #007bff; border-radius: 8px; padding: 20px; margin: 25px 0; font-size: 36px; font-weight: bold; letter-spacing: 8px; color: #007bff; }
+                .footer { background: #f9f9f9; padding: 20px; text-align: center; font-size: 12px; color: #999999; }
+            </style>
+        </head>
+        <body>
+            <div class='wrapper'>
+                <div class='container'>
+                    <div class='header'><h1 style='color: #ffffff; margin: 0; font-size: 24px;'>REDMAN FINANCE</h1></div>
+                    <div class='content'>
+                        <h2 style='margin-top: 0;'>Verification Code</h2>
+                        <p>Welcome to Redman Finance. Use the code below to verify your account.</p>
+                        <div class='code-box'>$new_code</div>
+                    </div>
+                    <div class='footer'>&copy; 2026 Redman Finance VIP.</div>
+                </div>
+            </div>
+        </body>
+        </html>";
+
+        $mail = new PHPMailer(true);
+        try {
+            // RE-DECLARE VARIABLES HERE TO BE 100% SURE
+            $email = $_POST['email']; 
+            $new_code = $verify_code; 
+
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'redmanfinancevip@gmail.com';
+            $mail->Password   = 'ytxysdclkfdmvyan'; 
+            $mail->SMTPSecure = 'tls';
+            $mail->Port       = 587;
+
+            $mail->setFrom('redmanfinancevip@gmail.com', 'Redman Finance');
+            $mail->addAddress($_POST['email']); 
+
+            $mail->isHTML(true);
+            $mail->Subject = "Verify Your Account - $new_code";
+            $mail->Body    = $message;
+
+            $mail->send();
+
+            header("location: verify.php?email=" . urlencode($_POST['email']));
+            exit();
+
+        } catch (Exception $e) {
+            header("location: verify.php?email=" . urlencode($_POST['email']) . "&error=mail");
+            exit();
         }
-         
-        // Close statement
-        mysqli_stmt_close($stmt);
-    }
-    
-    // Close connection
-    mysqli_close($link);
-}
+
+    } // Closes the if(mysqli_stmt_execute($stmt)) block
+
+    mysqli_stmt_close($stmt);
+
+    } // Closes the database preparation block ($stmt = mysqli_prepare) opened on line 158
+
+} // Closes the input errors check (Line 116)
+
+} // Closes the REQUEST_METHOD check (Line 30)
+
+// Close connection
+mysqli_close($link);
 ?>
 
 <!DOCTYPE html>

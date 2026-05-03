@@ -75,8 +75,8 @@ if(isset($row['status']) &&  $row['status']== "approved"){
 
 }else{
 		
-	$sql22 = "INSERT INTO investment (email,pname,increase,bonus,duration,pdate,froms,activate,usd,payday)
-VALUES ('$email','$investplan','$increase','$bonus','$duration','$cdate','$froms','1','$usd','$cdate')";
+	$sql22 = "INSERT INTO investment (email,pname,increase,bonus,duration,pdate,froms,activate,usd,profit,payday,lprofit,status)
+VALUES ('$email','$investplan','$increase','$bonus','$duration','$cdate','$froms','1','$usd','0.00','Daily','0.00','approved')";
           mysqli_query($link, $sql22);
           
           if($referred !=""){ 

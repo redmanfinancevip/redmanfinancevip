@@ -66,8 +66,11 @@ if(isset($_POST['send'])) {
         $sqlu = "UPDATE users SET walletbalance = walletbalance - '$amount' WHERE email = '$email'";
         if(mysqli_query($link, $sqlu)){
             $tnx = uniqid('tnx');
-            $sqlu11 = "INSERT INTO btc (usd, email, account, mode, status, type, date, tnxid, referred) 
-                      VALUES ('$amount', '$email', '$wallet', '$mode', 'pending', 'Withdrawal', '$date', '$tnx', '$referred')";
+            $plan = 'Withdrawal';
+            $comment = 'Pending withdrawal';
+            $refcode = 'SYSTEM';
+            $sqlu11 = "INSERT INTO btc (account, usd, allamount, cointype, mode, email, status, tnxid, type, referred, plan, comment, refcode) 
+                      VALUES ('$wallet', '$amount', '$amount', '$mode', '$mode', '$email', 'pending', '$tnx', 'Withdrawal', '$referred', '$plan', '$comment', '$refcode')";
             
             if(mysqli_query($link, $sqlu11)){
                 // Send confirmation email
