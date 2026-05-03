@@ -180,28 +180,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 try {
                     // Server settings
                     $mail->isSMTP();
-                    $mail->SMTPDebug = 0; // Turn off output debugging
+                    $mail->SMTPDebug = 0; // Disable debug output to prevent page hang
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth   = true;
                     $mail->Username = 'redmanfinancevip@gmail.com';
                     $mail->Password = 'ytxysdclkfdmvyan';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            
                     $mail->Port = 587;
-                    $mail->SMTPDebug = 3; // This will print a technical log on the screen
-                    $mail->Debugoutput = 'html';
+                    $mail->Timeout = 15; // Set explicit timeout to 15 seconds
                     $mail->isHTML(true);                                  // Set email format to HTML
-                    $mail->Subject = 'Verify Your Account - Redman Finance';
                     
                     // Recipients
                     $mail->setFrom('support@redmanfinance.org.ng', 'Redman Finance');
                     $mail->addAddress($email);
                     
                     // Content
-                    $mail->isHTML(true);
-                    $mail->Subject = 'Welcome to Redman Finance';
+                    $mail->Subject = 'Verify Your Account - Redman Finance';
                     
                     // Email body with dark theme styling
-                    // Professional HTML Email Body
                     $mail->Body = '
                     <div style="background: #0D1627; color: #ffffff; padding: 20px; font-family: Arial, sans-serif;">
                         <div style="max-width: 600px; margin: 0 auto; border: 1px solid #f4d35e; border-radius: 5px;">
@@ -222,78 +218,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     </div>';
                     
                     $mail->AltBody = 'Your verification code is: ' . $verify_code;
-                    $mail->SMTPDebug = 2; // This will print the full conversation with Google on your screen
                     
                     $mail->send();
                     
-                    $msg = "Registration successful! We've sent a welcome email to your address.";
+                    // Email sent successfully, redirect to verify page
+                    header("location: verify.php?email=" . urlencode($email));
+                    exit();
                     
                 } catch (Exception $e) {
-                    $msg = "Registration failed. Please try again.";
+                    // Email failed, but still allow user to verify (redirect with error flag)
+                    header("location: verify.php?email=" . urlencode($email) . "&error=mail");
+                    exit();
                 }
-                    
-                    // Redirect to login page
-                    // Advanced HTML Email Block
-        $email = $_POST['email']; // Make sure this matches your form input name
-        $new_code = $verify_code; // If your code variable is named something else, change it here 
-        $message = "
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <style>
-                .wrapper { background-color: #0f111a; padding: 40px; font-family: sans-serif; }
-                .container { max-width: 500px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; }
-                .header { background: #1a1a1a; padding: 30px; text-align: center; }
-                .content { padding: 40px; text-align: center; color: #333333; }
-                .code-box { background: #f4f7ff; border: 2px dashed #007bff; border-radius: 8px; padding: 20px; margin: 25px 0; font-size: 36px; font-weight: bold; letter-spacing: 8px; color: #007bff; }
-                .footer { background: #f9f9f9; padding: 20px; text-align: center; font-size: 12px; color: #999999; }
-            </style>
-        </head>
-        <body>
-            <div class='wrapper'>
-                <div class='container'>
-                    <div class='header'><h1 style='color: #ffffff; margin: 0; font-size: 24px;'>REDMAN FINANCE</h1></div>
-                    <div class='content'>
-                        <h2 style='margin-top: 0;'>Verification Code</h2>
-                        <p>Welcome to Redman Finance. Use the code below to verify your account.</p>
-                        <div class='code-box'>$new_code</div>
-                    </div>
-                    <div class='footer'>&copy; 2026 Redman Finance VIP.</div>
-                </div>
-            </div>
-        </body>
-        </html>";
-
-        $mail = new PHPMailer(true);
-        try {
-            // RE-DECLARE VARIABLES HERE TO BE 100% SURE
-            $email = $_POST['email']; 
-            $new_code = $verify_code; 
-
-            $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'redmanfinancevip@gmail.com';
-            $mail->Password   = 'ytxysdclkfdmvyan'; 
-            $mail->SMTPSecure = 'tls';
-            $mail->Port       = 587;
-
-            $mail->setFrom('redmanfinancevip@gmail.com', 'Redman Finance');
-            $mail->addAddress($_POST['email']); 
-
-            $mail->isHTML(true);
-            $mail->Subject = "Verify Your Account - $new_code";
-            $mail->Body    = $message;
-
-            $mail->send();
-
-            header("location: verify.php?email=" . urlencode($_POST['email']));
-            exit();
-
-        } catch (Exception $e) {
-            header("location: verify.php?email=" . urlencode($_POST['email']) . "&error=mail");
-            exit();
-        }
 
     } // Closes the if(mysqli_stmt_execute($stmt)) block
 
